@@ -5,5 +5,5 @@ RUN apk add --update bash && \
     build_nginx.sh \
     && rm /usr/local/bin/build_nginx.sh
 COPY nginx.conf /usr/local/nginx/conf/
-COPY rtmp.conf /usr/local/nginx/conf.d/
+COPY conf.d /usr/local/nginx/conf.d/
 CMD ["/usr/local/nginx/sbin/nginx", "-g", "daemon off;"]
